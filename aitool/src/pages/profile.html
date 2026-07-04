@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AI Tools Hub</title>
+    <link rel="canonical" href="https://aitoolshub.com/profile.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Profile — AI Tools Hub">
+    <meta property="og:description" content="View your favorites, bookmarks, recently viewed tools, reviews and comments.">
+    <meta property="og:site_name" content="AI Tools Hub">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/_variables.css"`n    <link rel="stylesheet" href="../styles/_global.css">`n    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+</head>
+<body>
+    <a href="#profileMainContent" class="skip-link">Skip to main content</a>
+    <div class="background-elements">
+        <div class="blur-blob top-left"></div>
+        <div class="blur-blob bottom-right"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="container header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../public/assets/favicon.svg" alt="AI Tools Hub Logo" class="logo-icon" style="width:28px;height:28px;">
+                <span class="logo-text">AI Tools Hub</span>
+            </a>
+            <nav class="main-nav">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="index.html#ai" class="nav-link">AI Tools</a>
+                <a href="index.html#pdf" class="nav-link">PDF Tools</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </nav>
+            <div class="header-actions">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+                </button>
+                <a href="auth.html" class="btn btn-secondary btn-sm" id="headerLoginBtn" style="margin-left:8px;">Login</a>
+                <a href="auth.html" class="btn btn-primary btn-sm" id="headerSignupBtn">Signup</a>
+                <div class="avatar-wrap" id="headerAvatarWrap" style="display:none;">
+                    <button class="avatar-btn"><span class="avatar-circle" id="headerAvatar">U</span><span id="headerAvatarName">User</span></button>
+                    <div class="avatar-dropdown" id="avatarDropdown">
+                        <a href="profile.html" class="dropdown-item">👤 My Profile</a>
+                        <a href="profile.html#favorites" class="dropdown-item">❤️ Favorites</a>
+                        <a href="profile.html#bookmarks" class="dropdown-item">🔖 Bookmarks</a>
+                        <a href="profile.html#recent" class="dropdown-item">🕐 Recently Viewed</a>
+                        <a href="compare.html" class="dropdown-item">⚖️ Compare Tools</a>
+                        <a href="admin.html" class="dropdown-item" id="adminDashboardLink" style="display:none;">🛡️ Admin Dashboard</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item danger" id="logoutBtn">🚪 Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="breadcrumbNav" class="breadcrumb-nav container" style="margin-top: 1rem;"></div>
+
+    <main id="profileMainContent" class="profile-main container" role="main">
+        <div class="profile-layout">
+            <!-- Sidebar -->
+            <aside class="profile-sidebar glass-card">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar-circle" id="profileAvatar">U</div>
+                    <h2 class="profile-name" id="profileName">User</h2>
+                    <p class="profile-email" id="profileEmail">user@example.com</p>
+                    <p class="profile-join" id="profileJoin">Joined January 2025</p>
+                    <div class="profile-provider" id="profileProvider"></div>
+                </div>
+                <nav class="profile-nav">
+                    <a href="#" class="profile-nav-item active" data-tab="overview">📊 Overview</a>
+                    <a href="#" class="profile-nav-item" data-tab="favorites">❤️ Favorites</a>
+                    <a href="#" class="profile-nav-item" data-tab="bookmarks">🔖 Bookmarks</a>
+                    <a href="#" class="profile-nav-item" data-tab="recent">🕐 Recently Viewed</a>
+                    <a href="#" class="profile-nav-item" data-tab="reviews">⭐ My Reviews</a>
+                    <a href="#" class="profile-nav-item" data-tab="comments">💬 My Comments</a>
+                    <a href="#" class="profile-nav-item" data-tab="settings">⚙️ Settings</a>
+                </nav>
+                <button class="btn btn-secondary" id="sidebarLogout" style="width:100%;margin-top:1rem;">🚪 Logout</button>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="profile-content">
+
+                <!-- Overview Tab -->
+                <div class="profile-tab active" id="tab-overview">
+                    <h2 class="profile-section-title">Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card glass-card" id="statFavorites">
+                            <div class="stat-card-icon">❤️</div>
+                            <div class="stat-card-val" id="statFavCount">0</div>
+                            <div class="stat-card-label">Favorites</div>
+                        </div>
+                        <div class="stat-card glass-card" id="statBookmarks">
+                            <div class="stat-card-icon">🔖</div>
+                            <div class="stat-card-val" id="statBookCount">0</div>
+                            <div class="stat-card-label">Bookmarks</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-card-icon">🕐</div>
+                            <div class="stat-card-val" id="statRecentCount">0</div>
+                            <div class="stat-card-label">Recently Viewed</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-card-icon">⭐</div>
+                            <div class="stat-card-val" id="statReviewCount">0</div>
+                            <div class="stat-card-label">Reviews Written</div>
+                        </div>
+                    </div>
+                    <h3 class="profile-subsection-title">Quick Access</h3>
+                    <div class="quick-access-grid" id="quickAccess"></div>
+                </div>
+
+                <!-- Favorites Tab -->
+                <div class="profile-tab" id="tab-favorites">
+                    <h2 class="profile-section-title">❤️ My Favorites</h2>
+                    <div class="profile-tools-grid" id="favoritesGrid"></div>
+                    <div class="profile-empty" id="favoritesEmpty" style="display:none;">
+                        <div class="empty-icon">❤️</div>
+                        <h3>No favorites yet</h3>
+                        <p>Click the ❤️ button on any tool to add it to your favorites.</p>
+                        <a href="../../index.html" class="btn btn-primary">Explore Tools</a>
+                    </div>
+                </div>
+
+                <!-- Bookmarks Tab -->
+                <div class="profile-tab" id="tab-bookmarks">
+                    <h2 class="profile-section-title">🔖 My Bookmarks</h2>
+                    <div class="profile-tools-grid" id="bookmarksGrid"></div>
+                    <div class="profile-empty" id="bookmarksEmpty" style="display:none;">
+                        <div class="empty-icon">🔖</div>
+                        <h3>No bookmarks yet</h3>
+                        <p>Click the 🔖 button on any tool card to save it here.</p>
+                        <a href="../../index.html" class="btn btn-primary">Explore Tools</a>
+                    </div>
+                </div>
+
+                <!-- Recently Viewed Tab -->
+                <div class="profile-tab" id="tab-recent">
+                    <h2 class="profile-section-title">🕐 Recently Viewed</h2>
+                    <div class="profile-tools-grid" id="recentGrid"></div>
+                    <div class="profile-empty" id="recentEmpty" style="display:none;">
+                        <div class="empty-icon">🕐</div>
+                        <h3>No history yet</h3>
+                        <p>Tools you visit will appear here automatically.</p>
+                        <a href="../../index.html" class="btn btn-primary">Start Exploring</a>
+                    </div>
+                </div>
+
+                <!-- Reviews Tab -->
+                <div class="profile-tab" id="tab-reviews">
+                    <h2 class="profile-section-title">⭐ My Reviews</h2>
+                    <div id="myReviewsList"></div>
+                    <div class="profile-empty" id="reviewsEmpty" style="display:none;">
+                        <div class="empty-icon">⭐</div>
+                        <h3>No reviews yet</h3>
+                        <p>Visit a tool page and share your experience with the community.</p>
+                        <a href="../../index.html" class="btn btn-primary">Explore Tools</a>
+                    </div>
+                </div>
+
+                <!-- Comments Tab -->
+                <div class="profile-tab" id="tab-comments">
+                    <h2 class="profile-section-title">💬 My Comments</h2>
+                    <div id="myCommentsList"></div>
+                    <div class="profile-empty" id="commentsEmpty" style="display:none;">
+                        <div class="empty-icon">💬</div>
+                        <h3>No comments yet</h3>
+                        <p>Join the conversation on any tool page.</p>
+                        <a href="../../index.html" class="btn btn-primary">Explore Tools</a>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="profile-tab" id="tab-settings">
+                    <h2 class="profile-section-title">⚙️ Account Settings</h2>
+                    <div class="settings-card glass-card">
+                        <h3 class="settings-section-title">Personal Information</h3>
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" id="settingsName" class="form-input" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="settingsEmail" class="form-input" placeholder="your@email.com" disabled>
+                            <small style="color:var(--text-secondary)">Email cannot be changed.</small>
+                        </div>
+                        <button class="btn btn-primary" onclick="saveSettings()">Save Changes</button>
+                    </div>
+                    <div class="settings-card glass-card danger-zone">
+                        <h3 class="settings-section-title" style="color:#ef4444;">Danger Zone</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:1rem;">Clear all your saved data from this browser.</p>
+                        <button class="btn" style="background:#ef4444;color:white;" onclick="clearAllData()">Clear All Data</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">AI Tools Hub</span>
+                </a>
+                <p>Discover and compare the best digital utilities and premium tools.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">𝕏</a>
+                    <a href="https://discord.com" class="social-icon" target="_blank" aria-label="Discord">👾</a>
+                    <a href="https://github.com" class="social-icon" target="_blank" aria-label="GitHub">🐙</a>
+                    <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#careers">Careers</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="index.html#privacy">Privacy Policy</a>
+                    <a href="index.html#terms">Terms of Service</a>
+                    <a href="index.html#disclaimer">Disclaimer</a>
+                </div>
+                <div class="link-column">
+                    <h4>Resources</h4>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#help">Help Center</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter ✉️</h4>
+                <p>Get curated updates on new releases & tutorials.</p>
+                <form class="footer-newsletter-form">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="email@example.com" class="footer-newsletter-input" required>
+                        <button type="submit" class="footer-newsletter-btn">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AI Tools Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/user-features.js"></script>
+    <script src="../js/extras.js" defer></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
+

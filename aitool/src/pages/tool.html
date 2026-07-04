@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Details | AI Tools Hub</title>
+    <meta name="description" content="Detailed information, reviews, pricing and features for this tool on AI Tools Hub.">
+    <link rel="canonical" href="https://aitoolshub.com/tool.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tool Details — AI Tools Hub">
+    <meta property="og:description" content="Detailed information, reviews, pricing and features.">
+    <meta property="og:site_name" content="AI Tools Hub">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/_variables.css"`n    <link rel="stylesheet" href="../styles/_global.css">`n    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/tool.css">
+</head>
+<body>
+    <a href="#toolDetailMain" class="skip-link">Skip to main content</a>
+    <div class="background-elements">
+        <div class="blur-blob top-left"></div>
+        <div class="blur-blob bottom-right"></div>
+    </div>
+
+    <!-- Shared Navigation -->
+    <header class="glass-header">
+        <div class="container header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../public/assets/favicon.svg" alt="AI Tools Hub Logo" class="logo-icon" style="width: 28px; height: 28px;">
+                <span class="logo-text">AI Tools Hub</span>
+            </a>
+            <nav class="main-nav">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="index.html#ai" class="nav-link">AI Tools</a>
+                <a href="index.html#pdf" class="nav-link">PDF Tools</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="index.html#trending" class="nav-link">Trending</a>
+                <a href="index.html#new" class="nav-link">New Tools</a>
+                <a href="index.html#top" class="nav-link">Top Rated</a>
+            </nav>
+            <div class="header-actions">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <a href="auth.html" class="btn btn-secondary btn-sm" id="headerLoginBtn" style="margin-left: 8px;">Login</a>
+                <a href="auth.html" class="btn btn-primary btn-sm" id="headerSignupBtn">Signup</a>
+                <div class="avatar-wrap" id="headerAvatarWrap" style="display:none;">
+                    <button class="avatar-btn"><span class="avatar-circle" id="headerAvatar">U</span><span id="headerAvatarName">User</span></button>
+                    <div class="avatar-dropdown" id="avatarDropdown">
+                        <a href="profile.html" class="dropdown-item">👤 My Profile</a>
+                        <a href="profile.html#favorites" class="dropdown-item">❤️ Favorites</a>
+                        <a href="profile.html#bookmarks" class="dropdown-item">🔖 Bookmarks</a>
+                        <a href="profile.html#recent" class="dropdown-item">🕐 Recently Viewed</a>
+                        <a href="compare.html" class="dropdown-item">⚖️ Compare Tools</a>
+                        <a href="admin.html" class="dropdown-item" id="adminDashboardLink" style="display:none;">🛡️ Admin Dashboard</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item danger" id="logoutBtn">🚪 Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="toolDetailMain" role="main">
+        <!-- Breadcrumbs Navigation -->
+        <div id="breadcrumbNav" class="breadcrumb-nav container"></div>
+
+        <!-- Hero Banner -->
+        <section class="tool-hero-section">
+            <div id="toolHeroBanner" class="tool-hero-banner"></div>
+            <div class="container tool-hero-content">
+                <div class="tool-hero-card glass-card">
+                    <div class="tool-hero-left">
+                        <div class="tool-hero-icon" id="toolIcon">🤖</div>
+                        <div class="tool-hero-info">
+                            <div class="tool-hero-badges">
+                                <span class="badge badge-category" id="toolCategoryBadge">AI Models</span>
+                                <span class="badge" id="toolPriceBadge">Paid</span>
+                                <span class="badge badge-trending" id="toolTrendingBadge" style="display:none;">🔥 Trending</span>
+                                <span class="badge badge-editors" id="toolEditorsBadge" style="display:none;">👑 Editor's Choice</span>
+                            </div>
+                            <h1 class="tool-hero-name" id="toolName">Loading...</h1>
+                            <p class="tool-hero-desc" id="toolHeroDesc">Loading...</p>
+                            <div class="tool-hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value" id="toolRating">—</span>
+                                    <span class="hero-stat-label">Rating</span>
+                                    <div class="star-row" id="starRow"></div>
+                                </div>
+                                <div class="hero-stat-divider"></div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value" id="toolUsers">—</span>
+                                    <span class="hero-stat-label">Users</span>
+                                </div>
+                                <div class="hero-stat-divider"></div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-value" id="toolPriceHero">—</span>
+                                    <span class="hero-stat-label">Starting Price</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-hero-right">
+                        <a id="visitWebsiteBtn" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-xl">
+                            🌐 Visit Website
+                        </a>
+                        <div class="tool-hero-actions">
+                            <button class="action-btn-lg" id="bookmarkBtn" title="Bookmark">🔖 Save</button>
+                            <button class="action-btn-lg" title="Compare">⚖️ Compare</button>
+                            <button class="action-btn-lg" title="Share">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Tab Nav -->
+        <div class="detail-tabs-bar glass-card" id="detailTabsBar">
+            <div class="container detail-tabs">
+                <a href="#overview" class="detail-tab active">Overview</a>
+                <a href="#features" class="detail-tab">Features</a>
+                <a href="#gallery" class="detail-tab">Gallery</a>
+                <a href="#pricing" class="detail-tab">Pricing</a>
+                <a href="#pros-cons" class="detail-tab">Pros & Cons</a>
+                <a href="#alternatives" class="detail-tab">Alternatives</a>
+                <a href="#faqs" class="detail-tab">FAQs</a>
+                <a href="#reviews" class="detail-tab">Reviews</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container detail-layout">
+            <div class="detail-main">
+
+                <!-- Overview -->
+                <section class="detail-section" id="overview">
+                    <h2 class="detail-section-title">📋 Overview</h2>
+                    <p id="toolOverview" class="detail-overview-text">Loading...</p>
+                </section>
+
+                <!-- Features -->
+                <section class="detail-section" id="features">
+                    <h2 class="detail-section-title">✨ Key Features</h2>
+                    <ul class="features-list" id="featuresList"></ul>
+                </section>
+
+                <!-- Gallery / Screenshots -->
+                <section class="detail-section" id="gallery">
+                    <h2 class="detail-section-title">🖼️ Screenshots & Gallery</h2>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <!-- Gallery images injected by JS -->
+                    </div>
+                    <!-- Lightbox -->
+                    <div class="lightbox" id="lightbox">
+                        <button class="lightbox-close" id="lightboxClose">✕</button>
+                        <button class="lightbox-nav prev" id="lightboxPrev">‹</button>
+                        <img src="" alt="Gallery Image" id="lightboxImg">
+                        <button class="lightbox-nav next" id="lightboxNext">›</button>
+                    </div>
+                </section>
+
+                <!-- Video Demo -->
+                <section class="detail-section" id="video-demo">
+                    <h2 class="detail-section-title">▶️ Video Demo</h2>
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <div class="play-btn-wrap">
+                                <div class="play-icon">▶</div>
+                            </div>
+                            <p>Official Demo Video</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pricing -->
+                <section class="detail-section" id="pricing">
+                    <h2 class="detail-section-title">💰 Pricing Plans</h2>
+                    <div class="pricing-grid" id="pricingGrid"></div>
+                </section>
+
+                <!-- Pros & Cons -->
+                <section class="detail-section" id="pros-cons">
+                    <h2 class="detail-section-title">⚖️ Pros & Cons</h2>
+                    <div class="pros-cons-grid">
+                        <div class="pros-card glass-card">
+                            <h3 class="pros-title">👍 Pros</h3>
+                            <ul class="pros-list" id="prosList"></ul>
+                        </div>
+                        <div class="cons-card glass-card">
+                            <h3 class="cons-title">👎 Cons</h3>
+                            <ul class="cons-list" id="consList"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQs -->
+                <section class="detail-section" id="faqs">
+                    <h2 class="detail-section-title">❓ Frequently Asked Questions</h2>
+                    <div class="faqs-list" id="faqsList"></div>
+                </section>
+
+                <!-- Reviews -->
+                <section class="detail-section" id="reviews">
+                    <h2 class="detail-section-title">⭐ User Reviews</h2>
+                    <div class="reviews-summary glass-card" id="reviewsSummary"></div>
+                    <div class="reviews-list" id="reviewsList"></div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="detail-sidebar">
+                <!-- Related / Alternative Tools -->
+                <div class="sidebar-card glass-card" id="alternativesCard">
+                    <h3 class="sidebar-title">🔄 Alternatives</h3>
+                    <div class="sidebar-tools-list" id="alternativesList"></div>
+                </div>
+
+                <div class="sidebar-card glass-card" id="relatedCard">
+                    <h3 class="sidebar-title">🔗 Related Tools</h3>
+                    <div class="sidebar-tools-list" id="relatedList"></div>
+                </div>
+
+                <div class="sidebar-cta glass-card">
+                    <div class="sidebar-cta-icon">🚀</div>
+                    <h3>Ready to get started?</h3>
+                    <p>Join millions of users already using this tool.</p>
+                    <a id="sidebarVisitBtn" href="#" target="_blank" class="btn btn-primary" style="width:100%;text-align:center;">Visit Website</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Related Tools Bottom -->
+        <section class="detail-section container" id="alternatives" style="margin-top:2rem;">
+            <h2 class="detail-section-title">🛠️ Related Tools You May Like</h2>
+            <div class="tools-carousel" id="relatedToolsCarousel"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">AI Tools Hub</span>
+                </a>
+                <p>Discover and compare the best digital utilities and premium tools.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">𝕏</a>
+                    <a href="https://discord.com" class="social-icon" target="_blank" aria-label="Discord">👾</a>
+                    <a href="https://github.com" class="social-icon" target="_blank" aria-label="GitHub">🐙</a>
+                    <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#careers">Careers</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="index.html#privacy">Privacy Policy</a>
+                    <a href="index.html#terms">Terms of Service</a>
+                    <a href="index.html#disclaimer">Disclaimer</a>
+                </div>
+                <div class="link-column">
+                    <h4>Resources</h4>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#help">Help Center</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter ✉️</h4>
+                <p>Get curated updates on new releases & tutorials.</p>
+                <form class="footer-newsletter-form">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="email@example.com" class="footer-newsletter-input" required>
+                        <button type="submit" class="footer-newsletter-btn">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AI Tools Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/user-features.js"></script>
+    <script src="../js/extras.js" defer></script>
+    <script src="../js/tool.js"></script>
+</body>
+</html>
+

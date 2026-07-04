@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+    <defs>
+        <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#06B6D4" />
+            <stop offset="40%" stop-color="#4F46E5" />
+            <stop offset="100%" stop-color="#7C3AED" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Outer Hexagon -->
+    <path d="M60 15 L98.97 37.5 L98.97 82.5 L60 105 L21.03 82.5 L21.03 37.5 Z" fill="none" stroke="url(#aiGrad)" stroke-width="12" stroke-linejoin="round"/>
+    
+    <!-- Central Node -->
+    <circle cx="60" cy="60" r="14" fill="url(#aiGrad)" />
+    
+    <!-- Spokes connecting to center -->
+    <line x1="60" y1="15" x2="60" y2="46" stroke="url(#aiGrad)" stroke-width="12" stroke-linecap="round" />
+    <line x1="98.97" y1="82.5" x2="72.12" y2="67" stroke="url(#aiGrad)" stroke-width="12" stroke-linecap="round" />
+    <line x1="21.03" y1="82.5" x2="47.88" y2="67" stroke="url(#aiGrad)" stroke-width="12" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & PDF Blog — AI Tools Hub</title>
+    <meta name="description" content="Stay updated with the latest AI trends, tutorials, reviews, comparisons, and news.">
+    <link rel="canonical" href="https://aitoolshub.com/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AI & PDF Blog — AI Tools Hub">
+    <meta property="og:description" content="Stay updated with the latest AI trends, tutorials, reviews, comparisons, and news.">
+    <meta property="og:site_name" content="AI Tools Hub">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/_variables.css"`n    <link rel="stylesheet" href="../styles/_global.css">`n    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <a href="#blogMainContent" class="skip-link">Skip to main content</a>
+    <div class="background-elements">
+        <div class="blur-blob top-left"></div>
+        <div class="blur-blob bottom-right"></div>
+    </div>
+
+    <!-- GLASS HEADER -->
+    <header class="glass-header">
+        <div class="container header-content">
+            <a href="../../index.html" class="logo">
+                <img src="../../public/assets/favicon.svg" alt="AI Tools Hub Logo" class="logo-icon" style="width: 28px; height: 28px;">
+                <span class="logo-text">AI Tools Hub</span>
+            </a>
+            
+            <nav class="main-nav">
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="index.html#ai" class="nav-link">AI Tools</a>
+                <a href="index.html#pdf" class="nav-link">PDF Tools</a>
+                <a href="index.html#categories" class="nav-link">Categories</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <a href="auth.html" class="btn btn-secondary btn-sm" id="headerLoginBtn" style="margin-left: 8px;">Login</a>
+                <a href="auth.html" class="btn btn-primary btn-sm" id="headerSignupBtn">Signup</a>
+                <div class="avatar-wrap" id="headerAvatarWrap" style="display:none;">
+                    <button class="avatar-btn"><span class="avatar-circle" id="headerAvatar">U</span><span id="headerAvatarName">User</span></button>
+                    <div class="avatar-dropdown" id="avatarDropdown">
+                        <a href="profile.html" class="dropdown-item">👤 My Profile</a>
+                        <a href="profile.html#favorites" class="dropdown-item">❤️ Favorites</a>
+                        <a href="profile.html#bookmarks" class="dropdown-item">🔖 Bookmarks</a>
+                        <a href="profile.html#recent" class="dropdown-item">🕐 Recently Viewed</a>
+                        <a href="compare.html" class="dropdown-item">⚖️ Compare Tools</a>
+                        <a href="admin.html" class="dropdown-item" id="adminDashboardLink" style="display:none;">🛡️ Admin Dashboard</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item danger" id="logoutBtn">🚪 Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="breadcrumbNav" class="breadcrumb-nav container" style="margin-top: 1rem;"></div>
+
+    <main id="blogMainContent" class="blog-main container" role="main">
+        <!-- BLOG HERO -->
+        <section class="blog-hero">
+            <span class="hero-badge">Latest Insights & Guides 📚</span>
+            <h1 class="blog-main-title">AI & PDF Technology Hub</h1>
+            <p class="blog-main-subtitle">Read detailed tutorials, comparisons, product reviews, and trends from our editor team.</p>
+        </section>
+
+        <!-- SEARCH AND FILTER CHIPS -->
+        <section class="blog-filters-section glass-card">
+            <div class="blog-search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="blogSearchInput" placeholder="Search articles by title, content, or tags..." class="blog-search-input">
+            </div>
+            <div class="blog-category-chips" id="blogCategoryChips">
+                <button class="chip active" data-category="All">All Categories</button>
+                <button class="chip" data-category="AI News">AI News</button>
+                <button class="chip" data-category="AI Tutorials">AI Tutorials</button>
+                <button class="chip" data-category="Product Reviews">Product Reviews</button>
+                <button class="chip" data-category="Comparisons">Comparisons</button>
+                <button class="chip" data-category="Latest AI Trends">Latest AI Trends</button>
+            </div>
+        </section>
+
+        <!-- FEATURED POST BANNER -->
+        <section class="featured-post-section" id="featuredPostContainer">
+            <!-- Rendered dynamically -->
+        </section>
+
+        <!-- MAIN LAYOUT: FEED + SIDEBAR -->
+        <div class="blog-layout-grid">
+            <!-- Article cards feed -->
+            <div class="blog-feed-container" id="blogFeedContainer">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Sidebar widgets -->
+            <aside class="blog-sidebar">
+                <!-- Recent posts widget -->
+                <div class="sidebar-widget glass-card">
+                    <h3 class="widget-title">Recent Posts ⚡</h3>
+                    <div class="widget-list" id="sidebarRecentPosts">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Newsletter widget -->
+                <div class="sidebar-widget glass-card newsletter-widget">
+                    <h3 class="widget-title">Newsletter ✉️</h3>
+                    <p>Subscribe to receive the best articles and product discoveries directly in your inbox.</p>
+                    <form id="blogNewsletterForm">
+                        <input type="email" placeholder="name@email.com" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">AI Tools Hub</span>
+                </a>
+                <p>Discover and compare the best digital utilities and premium tools.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">𝕏</a>
+                    <a href="https://discord.com" class="social-icon" target="_blank" aria-label="Discord">👾</a>
+                    <a href="https://github.com" class="social-icon" target="_blank" aria-label="GitHub">🐙</a>
+                    <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#careers">Careers</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="index.html#privacy">Privacy Policy</a>
+                    <a href="index.html#terms">Terms of Service</a>
+                    <a href="index.html#disclaimer">Disclaimer</a>
+                </div>
+                <div class="link-column">
+                    <h4>Resources</h4>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#help">Help Center</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter ✉️</h4>
+                <p>Get curated updates on new releases & tutorials.</p>
+                <form class="footer-newsletter-form">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="email@example.com" class="footer-newsletter-input" required>
+                        <button type="submit" class="footer-newsletter-btn">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AI Tools Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- DYNAMIC READER VIEW MODAL -->
+    <div class="modal-overlay" id="readerModal">
+        <div class="modal-content glass-card reader-card">
+            <div class="modal-header">
+                <span class="badge badge-category" id="readerCategory">AI Tutorials</span>
+                <button class="btn-close-modal" id="readerCloseBtn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body reader-body">
+                <h1 class="reader-title" id="readerTitle">Post Title</h1>
+                <div class="reader-meta">
+                    <span class="reader-author" id="readerAuthor">By Author</span>
+                    <span class="reader-divider">•</span>
+                    <span class="reader-date" id="readerDate">June 20, 2026</span>
+                </div>
+                <div class="reader-content-text" id="readerContentText">
+                    Post contents...
+                </div>
+                <div class="reader-tags" id="readerTags">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/extras.js" defer></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>
+

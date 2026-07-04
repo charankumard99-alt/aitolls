@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register | AI Tools Hub</title>
+    <meta name="description" content="Sign in or create your free AI Tools Hub account to save favorites, bookmark tools, and write reviews.">
+    <link rel="canonical" href="https://aitoolshub.com/auth.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Login & Register — AI Tools Hub">
+    <meta property="og:description" content="Sign in or create your free AI Tools Hub account to save favorites, bookmark tools, and write reviews.">
+    <meta property="og:site_name" content="AI Tools Hub">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4F46E5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/_variables.css"`n    <link rel="stylesheet" href="../styles/_global.css">`n    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body data-page="auth">
+    <a href="#authMainContent" class="skip-link">Skip to main content</a>
+    <div class="background-elements">
+        <div class="blur-blob top-left"></div>
+        <div class="blur-blob bottom-right"></div>
+    </div>
+
+    <!-- Back to home -->
+    <a href="../../index.html" class="auth-back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to AI Tools Hub
+    </a>
+
+    <div id="breadcrumbNav" class="breadcrumb-nav container" style="margin-top: 1rem;"></div>
+
+    <div id="authMainContent" class="auth-page" role="main">
+        <!-- Left Branding Panel -->
+        <div class="auth-brand-panel">
+            <div class="auth-brand-content">
+                <a href="../../index.html" class="logo" style="margin-bottom:2rem;">
+                    <img src="../../public/assets/favicon.svg" alt="Logo" style="width:36px;height:36px;">
+                    <span class="logo-text" style="font-size:1.4rem;">AI Tools Hub</span>
+                </a>
+                <h2 class="auth-brand-title">Discover, Save & Compare<br>the Best AI Tools</h2>
+                <p class="auth-brand-subtitle">Join over 2 million users who use AI Tools Hub to find the perfect tools for their workflow.</p>
+                <div class="auth-brand-features">
+                    <div class="auth-feature"><span>❤️</span> Save unlimited favorites</div>
+                    <div class="auth-feature"><span>🔖</span> Bookmark tools for later</div>
+                    <div class="auth-feature"><span>⚖️</span> Compare tools side-by-side</div>
+                    <div class="auth-feature"><span>⭐</span> Write reviews and ratings</div>
+                    <div class="auth-feature"><span>🕐</span> Track recently viewed tools</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Auth Panel -->
+        <div class="auth-form-panel">
+            <div class="auth-card glass-card">
+                <!-- Tab Switcher -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab" onclick="switchTab('login')">Sign In</button>
+                    <button class="auth-tab" id="registerTab" onclick="switchTab('register')">Create Account</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form-section">
+                    <h1 class="auth-form-title">Welcome back 👋</h1>
+                    <p class="auth-form-subtitle">Sign in to your AI Tools Hub account</p>
+
+                    <div class="social-btns">
+                        <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+                            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.26 9.77A7.98 7.98 0 0 1 12 4c1.93 0 3.68.69 5.05 1.82l3.54-3.54A12 12 0 0 0 .96 9.09l4.3.68Z"/><path fill="#FBBC05" d="M16.04 20.18A12 12 0 0 1 .96 14.91l4.3-.68A7.97 7.97 0 0 0 12 20c1.89 0 3.62-.66 4.98-1.74l-.94 1.92Z"/><path fill="#4285F4" d="M23.76 12.27c0-.73-.07-1.44-.19-2.12H12v4.01h6.6a5.65 5.65 0 0 1-2.45 3.71l3.84 2.97c2.25-2.07 3.55-5.13 3.77-8.57Z"/><path fill="#34A853" d="M16.04 20.18l-3.84-2.97A7.97 7.97 0 0 1 12 20c-1.93 0-3.68-.7-5.04-1.82l-4.3.68A12 12 0 0 0 12 24c3.1 0 5.9-1.17 8.04-3.07l-4-0.75Z"/></svg>
+                            Continue with Google
+                        </button>
+                        <button class="social-btn github-btn" onclick="handleGithubLogin()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                            Continue with GitHub
+                        </button>
+                    </div>
+
+                    <div class="auth-divider"><span>or sign in with email</span></div>
+
+                    <form id="loginFormEl" onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="loginEmail" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <div class="input-password-wrap">
+                                <input type="password" id="loginPassword" class="form-input" placeholder="Your password" required>
+                                <button type="button" class="toggle-pw" onclick="togglePw('loginPassword', this)">👁</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-check"><input type="checkbox"> Remember me</label>
+                            <a href="#" class="form-link">Forgot password?</a>
+                        </div>
+                        <div id="loginError" class="form-error" style="display:none;"></div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+                    <p class="auth-switch-text">Don't have an account? <a href="#" onclick="switchTab('register')">Create one free →</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form-section" style="display:none;">
+                    <h1 class="auth-form-title">Create your account ✨</h1>
+                    <p class="auth-form-subtitle">It's free and takes less than 30 seconds</p>
+
+                    <div class="social-btns">
+                        <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+                            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M5.26 9.77A7.98 7.98 0 0 1 12 4c1.93 0 3.68.69 5.05 1.82l3.54-3.54A12 12 0 0 0 .96 9.09l4.3.68Z"/><path fill="#FBBC05" d="M16.04 20.18A12 12 0 0 1 .96 14.91l4.3-.68A7.97 7.97 0 0 0 12 20c1.89 0 3.62-.66 4.98-1.74l-.94 1.92Z"/><path fill="#4285F4" d="M23.76 12.27c0-.73-.07-1.44-.19-2.12H12v4.01h6.6a5.65 5.65 0 0 1-2.45 3.71l3.84 2.97c2.25-2.07 3.55-5.13 3.77-8.57Z"/><path fill="#34A853" d="M16.04 20.18l-3.84-2.97A7.97 7.97 0 0 1 12 20c-1.93 0-3.68-.7-5.04-1.82l-4.3.68A12 12 0 0 0 12 24c3.1 0 5.9-1.17 8.04-3.07l-4-0.75Z"/></svg>
+                            Sign up with Google
+                        </button>
+                        <button class="social-btn github-btn" onclick="handleGithubLogin()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                            Sign up with GitHub
+                        </button>
+                    </div>
+
+                    <div class="auth-divider"><span>or register with email</span></div>
+
+                    <form id="registerFormEl" onsubmit="handleRegister(event)">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" id="regName" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="regEmail" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <div class="input-password-wrap">
+                                <input type="password" id="regPassword" class="form-input" placeholder="Min. 8 characters" required minlength="8">
+                                <button type="button" class="toggle-pw" onclick="togglePw('regPassword', this)">👁</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" id="regConfirm" class="form-input" placeholder="Repeat password" required>
+                        </div>
+                        <div id="regError" class="form-error" style="display:none;"></div>
+                        <button type="submit" class="btn btn-primary btn-block">Create Free Account</button>
+                    </form>
+                    <p class="auth-switch-text">Already have an account? <a href="#" onclick="switchTab('login')">Sign in →</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">AI Tools Hub</span>
+                </a>
+                <p>Discover and compare the best digital utilities and premium tools.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">𝕏</a>
+                    <a href="https://discord.com" class="social-icon" target="_blank" aria-label="Discord">👾</a>
+                    <a href="https://github.com" class="social-icon" target="_blank" aria-label="GitHub">🐙</a>
+                    <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#careers">Careers</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="index.html#privacy">Privacy Policy</a>
+                    <a href="index.html#terms">Terms of Service</a>
+                    <a href="index.html#disclaimer">Disclaimer</a>
+                </div>
+                <div class="link-column">
+                    <h4>Resources</h4>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#help">Help Center</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter ✉️</h4>
+                <p>Get curated updates on new releases & tutorials.</p>
+                <form class="footer-newsletter-form">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="email@example.com" class="footer-newsletter-input" required>
+                        <button type="submit" class="footer-newsletter-btn">Join</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AI Tools Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/extras.js" defer></script>
+    <script>
+        // Redirect if already logged in
+        if (isLoggedIn()) window.location.href = 'profile.html';
+
+        function switchTab(tab) {
+            document.getElementById('loginForm').style.display = tab === 'login' ? 'block' : 'none';
+            document.getElementById('registerForm').style.display = tab === 'register' ? 'block' : 'none';
+            document.getElementById('loginTab').classList.toggle('active', tab === 'login');
+            document.getElementById('registerTab').classList.toggle('active', tab === 'register');
+        }
+
+        function togglePw(id, btn) {
+            const input = document.getElementById(id);
+            input.type = input.type === 'password' ? 'text' : 'password';
+            btn.textContent = input.type === 'password' ? '👁' : '🙈';
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const result = loginUser(email, password);
+            if (result.success) {
+                showToast(`Welcome back, ${result.user.name}! 👋`, 'success');
+                setTimeout(() => window.location.href = 'index.html', 1000);
+            } else {
+                const err = document.getElementById('loginError');
+                err.textContent = result.error;
+                err.style.display = 'block';
+            }
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value;
+            const confirm = document.getElementById('regConfirm').value;
+            const err = document.getElementById('regError');
+            if (password !== confirm) { err.textContent = 'Passwords do not match.'; err.style.display = 'block'; return; }
+            const result = registerUser(name, email, password);
+            if (result.success) {
+                showToast(`Welcome to AI Tools Hub, ${name}! 🎉`, 'success');
+                setTimeout(() => window.location.href = 'index.html', 1000);
+            } else {
+                err.textContent = result.error;
+                err.style.display = 'block';
+            }
+        }
+
+        function handleGoogleLogin() {
+            const name = prompt('Enter your name (Google simulation):');
+            if (!name) return;
+            const email = `${name.toLowerCase().replace(/\s/g, '.')}@gmail.com`;
+            const result = socialLogin('google', name, email);
+            if (result.success) {
+                showToast(`Signed in with Google as ${name}! 🔴`, 'success');
+                setTimeout(() => window.location.href = 'index.html', 1000);
+            }
+        }
+
+        function handleGithubLogin() {
+            const name = prompt('Enter your GitHub username:');
+            if (!name) return;
+            const email = `${name.toLowerCase()}@github.com`;
+            const result = socialLogin('github', name, email);
+            if (result.success) {
+                showToast(`Signed in with GitHub as ${name}! ⚫`, 'success');
+                setTimeout(() => window.location.href = 'index.html', 1000);
+            }
+        }
+    </script>
+</body>
+</html>
+

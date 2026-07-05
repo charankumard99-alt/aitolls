@@ -6,7 +6,19 @@
       "use": "@vercel/node"
     },
     {
-      "src": "**",
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "src/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
       "use": "@vercel/static"
     }
   ],
@@ -16,12 +28,20 @@
       "dest": "/backend/src/server.ts"
     },
     {
-      "src": "/",
-      "dest": "/index.html"
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/src/(.*)",
+      "dest": "/src/$1"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 }

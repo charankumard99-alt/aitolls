@@ -22,8 +22,15 @@ router.get('/', async (req, res) => {
             ];
         }
 
-        const tools = await Tool.find(query).sort({ title: 1 });
-        return res.json(tools);
+        const tools = await Tool.find(query).sort({ title: 1 }).lean();
+        
+        // Map isNewTool back to isNew for the frontend
+        const mappedTools = tools.map((t: any) => ({
+            ...t,
+            isNew: t.isNewTool
+        }));
+        
+        return res.json(mappedTools);
     } catch (error: any) {
         return res.status(500).json({ error: error.message });
     }
@@ -32,11 +39,17 @@ router.get('/', async (req, res) => {
 // ── GET SINGLE TOOL DETAILS ──────────────────────────────────
 router.get('/:id', async (req, res) => {
     try {
-        const tool = await Tool.findById(req.params.id);
+        const tool = await Tool.findById(req.params.id).lean();
         if (!tool) {
             return res.status(404).json({ error: 'Tool not found.' });
         }
-        return res.json(tool);
+        
+        const mappedTool = {
+            ...(tool as any),
+            isNew: (tool as any).isNewTool
+        };
+        
+        return res.json(mappedTool);
     } catch (error: any) {
         return res.status(500).json({ error: error.message });
     }
@@ -45,6 +58,10 @@ router.get('/:id', async (req, res) => {
 // ── ADMIN CREATE NEW TOOL ────────────────────────────────────
 router.post('/', authMiddleware, adminOnly, async (req: AuthenticatedRequest, res) => {
     try {
+        if ('isNew' in req.body) {
+            req.body.isNewTool = req.body.isNew;
+            delete req.body.isNew;
+        }
         const tool = new Tool(req.body);
         await tool.save();
         return res.status(201).json(tool);
@@ -56,6 +73,10 @@ router.post('/', authMiddleware, adminOnly, async (req: AuthenticatedRequest, re
 // ── ADMIN UPDATE TOOL ────────────────────────────────────────
 router.put('/:id', authMiddleware, adminOnly, async (req: AuthenticatedRequest, res) => {
     try {
+        if ('isNew' in req.body) {
+            req.body.isNewTool = req.body.isNew;
+            delete req.body.isNew;
+        }
         const tool = await Tool.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
         if (!tool) {
             return res.status(404).json({ error: 'Tool not found.' });

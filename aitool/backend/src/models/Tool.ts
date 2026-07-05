@@ -18,7 +18,7 @@ export interface ITool extends Document {
     users: string;
     isTrending: boolean;
     isFeatured: boolean;
-    isNew: boolean;
+    isNewTool: boolean;
     isEditorsChoice: boolean;
     isRecommended: boolean;
     pros: string[];
@@ -44,7 +44,7 @@ const ToolSchema = new Schema<ITool>({
     users: { type: String, default: '10K+' },
     isTrending: { type: Boolean, default: false },
     isFeatured: { type: Boolean, default: false },
-    isNew: { type: Boolean, default: false },
+    isNewTool: { type: Boolean, default: false },
     isEditorsChoice: { type: Boolean, default: false },
     isRecommended: { type: Boolean, default: false },
     pros: [{ type: String }],

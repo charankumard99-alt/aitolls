@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Debug</title></head>
+<body>
+  <h1 style="font-family:sans-serif; color:green">✅ Vercel is serving files correctly!</h1>
+  <p>If you can see this page, the static file serving is working.</p>
+  <p><a href="/">Go to main site</a></p>
+  <script>
+    fetch('/api/tools')
+      .then(r => r.json())
+      .then(d => {
+        document.body.innerHTML += '<p style="color:green">✅ API works! Got ' + (Array.isArray(d) ? d.length : JSON.stringify(d)) + ' tools</p>';
+      })
+      .catch(e => {
+        document.body.innerHTML += '<p style="color:red">❌ API error: ' + e.message + '</p>';
+      });
+  </script>
+</body>
+</html>

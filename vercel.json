@@ -1,9 +1,7 @@
 {
   "version": 2,
   "functions": {
-    "aitool/backend/src/server.ts": {
-      "runtime": "@vercel/node@3"
-    }
+    "aitool/backend/src/server.ts": {}
   },
   "rewrites": [
     {
@@ -12,7 +10,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/aitool/$1"
+      "destination": "/aitool/index.html"
     }
   ]
 }

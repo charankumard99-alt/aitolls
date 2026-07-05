@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "aitool/backend/src/server.ts": {
+      "runtime": "@vercel/node@3"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/aitool/backend/src/server.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/aitool/$1"
+    }
+  ]
+}

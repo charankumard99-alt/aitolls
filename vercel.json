@@ -1,16 +1,12 @@
 {
-  "version": 2,
-  "functions": {
-    "aitool/backend/src/server.ts": {}
-  },
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "/aitool/backend/src/server.ts"
+      "destination": "/api/index"
     },
     {
       "source": "/(.*)",
-      "destination": "/aitool/index.html"
+      "destination": "/aitool/$1"
     }
   ]
 }
